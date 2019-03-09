@@ -1,44 +1,49 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
       <title>CALCULATOR</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      
       <link rel="stylesheet" href="ssheet.css">
     </head>
     <body background="asd.jpg"><br><br><br>
       <div class ="container" >     
       <div align="center" >
          <p style="font-family: cursive; font-size: 200% ">CALCULATOR</p>
-        <input type="text" placeholder="0." disabled>
+        <form name="form" ><br/>
+                <input class=" form-control " id="panel" name="panel" placeholder="0" disabled><br/>
         <div>
             <br>
-            <button class="btn btn-primary bttn">7</button>
-            <button class="btn btn-primary bttn">8</button>
-            <button class="btn btn-primary bttn">9</button>
-            <button class="btn btn-danger bttn">+</button>
+            <button type="button" class="btn btn-primary btn" name="btn7" value="7" onclick="calC(btn7.value);">7</button>
+            <button type="button" class="btn btn-primary btn" name="btn8" value="8" onclick="calC(btn8.value);">8</button>
+            <button type="button" class="btn btn-primary btn" name="btn9" value="9" onclick="calC(btn9.value);">9</button>
+            <button type="button" class="btn btn-danger btn" name="bttnplus" value="+"  onclick="calC(bttnplus.value);">+</button>
         </div>
         <div>
-            <button class="btn btn-primary bttn">4</button>
-            <button class="btn btn-primary bttn">5</button>
-            <button class="btn btn-primary bttn">6</button>
-            <button class="btn btn-danger bttn">-</button>
+            <button type="button" class="btn btn-primary btn" name="btn4" value="4" onclick="calC(btn4.value);">4</button>
+            <button type="button" class="btn btn-primary btn" name="btn5" value="5" onclick="calC(btn5.value);">5</button>
+            <button type="button" class="btn btn-primary btn" name="btn6" value="6" onclick="calC(btn6.value);">6</button>
+            <button type="button" class="btn btn-danger btn" name="bttnminus" value="-" onclick="calC(bttnminus.value);">-</button>
         </div>
         <div>
-            <button class="btn btn-primary bttn">1</button>
-            <button class="btn btn-primary bttn">2</button>
-            <button class="btn btn-primary bttn">3</button>
-            <button class="btn btn-danger bttn">*</button>
+            <button type="button" class="btn btn-primary btn" name="btn1" value="1" onclick="calC(btn1.value);">1</button>
+            <button type="button" class="btn btn-primary btn" name="btn2" value="2" onclick="calC(btn2.value);">2</button>
+            <button type="button" class="btn btn-primary btn" name="btn3" value="3" onclick="calC(btn3.value);">3</button>
+            <button type="button" class="btn btn-danger btn" name="bttnmult" value="*" onclick="calC(bttnmult.value);">*</button>
         </div>
         <div>
-            <button class="btn btn-primary bttn">.</button>
-            <button class="btn btn-primary bttn">0</button>
-            <button class="btn btn-danger bttn">%</button>
-            <button class="btn btn-danger bttn">/</button>
+            <button type="button" class="btn btn-primary btn" name="btndot" value="." onclick="calC(btndot.value);">.</button>
+            <button type="button" class="btn btn-primary btn" name="btn0" value="0" onclick="calC(btn0.value);">0</button>
+            <button type="button" class="btn btn-danger btn" name="bttnmod" value="%" onclick="calC(bttnmod.value);">%</button>
+            <button type="button" class="btn btn-danger btn" name="bttndiv" value="/" onclick="calC(bttndiv.value);">/</button>
         </div>
         <div class="ff">
-            <button class="btn btn-danger">C</button>
-            <button class="btn btn-danger">=</button>
+            <button type="button" class="btn btn-danger butn" name="butnCE" value="CE" onclick="CE();">C</button>
+            <button type="button" class="btn btn-success butn" name="butn=" value="=" onclick="panel.value=eval(panel.value);">=</button>
         </div>
+      </form>
       </div>
     </div>
+    <script src="script.js"></script>
     </body>
 </html>
